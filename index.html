@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-GB">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Saints – Stop Dreading Technology. Get Patient Help at Home.</title>
-    <meta name="description" content="Frustrated with your computer? An ex-monk comes to your East Sussex home. £1/minute. No jargon. No judgement. Just tech that finally works.">
-    
+    <meta name="description"
+        content="Frustrated with your computer? An ex-monk comes to your East Sussex home. £1/minute. No jargon. No judgement. Just tech that finally works.">
+
     <!-- Fonts: Georgia (headings) + Source Sans Pro (body) per style guide -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <style>
         /* ========================================
            CSS CUSTOM PROPERTIES
@@ -18,66 +21,91 @@
            ======================================== */
         :root {
             /* Primary Colors */
-            --color-primary: #1E3A5F;           /* Deep Trust Blue - headers, nav, primary text */
-            --color-primary-light: #2D5A8A;    /* Light Trust Blue - links, secondary headings, hover */
-            
+            --color-primary: #1E3A5F;
+            /* Deep Trust Blue - headers, nav, primary text */
+            --color-primary-light: #2D5A8A;
+            /* Light Trust Blue - links, secondary headings, hover */
+
             /* Secondary Colors */
-            --color-secondary: #6B8E7A;        /* Warm Sage - testimonials, trust badges, accents */
-            --color-secondary-light: #8FB4A0; /* Soft Sage - backgrounds, subtle highlights */
-            
+            --color-secondary: #6B8E7A;
+            /* Warm Sage - testimonials, trust badges, accents */
+            --color-secondary-light: #8FB4A0;
+            /* Soft Sage - backgrounds, subtle highlights */
+
             /* Accent & CTA Colors */
-            --color-accent: #E8A54B;           /* Friendly Amber - PRIMARY CTA ONLY */
-            --color-accent-hover: #D4923C;    /* Deep Amber - CTA hover state */
-            
+            --color-accent: #E8A54B;
+            /* Friendly Amber - PRIMARY CTA ONLY */
+            --color-accent-hover: #D4923C;
+            /* Deep Amber - CTA hover state */
+
             /* Neutral Colors */
-            --color-neutral-50: #FAFBFC;      /* Off White - page backgrounds, cards */
-            --color-neutral-100: #E8ECEF;     /* Light Grey - section dividers, borders */
-            --color-neutral-400: #9CA8B3;     /* Mid Grey - placeholder text, disabled states */
-            --color-neutral-700: #2D3640;     /* Charcoal - body text, secondary content */
-            --color-neutral-900: #1A2128;     /* Near Black - headlines, emphasis text */
-            
+            --color-neutral-50: #FAFBFC;
+            /* Off White - page backgrounds, cards */
+            --color-neutral-100: #E8ECEF;
+            /* Light Grey - section dividers, borders */
+            --color-neutral-400: #9CA8B3;
+            /* Mid Grey - placeholder text, disabled states */
+            --color-neutral-700: #2D3640;
+            /* Charcoal - body text, secondary content */
+            --color-neutral-900: #1A2128;
+            /* Near Black - headlines, emphasis text */
+
             /* Semantic Colors */
-            --color-success: #4A9E6B;         /* Confirmation Green */
-            --color-error: #D4544A;           /* Alert Red */
-            
+            --color-success: #4A9E6B;
+            /* Confirmation Green */
+            --color-error: #D4544A;
+            /* Alert Red */
+
             /* Typography - Per Style Guide */
             --font-heading: Georgia, 'Times New Roman', serif;
             --font-body: 'Source Sans 3', 'Segoe UI', Arial, sans-serif;
-            
+
             /* Type Scale */
-            --text-hero: clamp(32px, 5vw, 48px);     /* 32px mobile → 48px desktop */
-            --text-h2: clamp(28px, 4vw, 36px);       /* Section titles */
-            --text-h3: 24px;                          /* Subsections */
-            --text-body: 18px;                        /* MINIMUM per accessibility */
+            --text-hero: clamp(32px, 5vw, 48px);
+            /* 32px mobile → 48px desktop */
+            --text-h2: clamp(28px, 4vw, 36px);
+            /* Section titles */
+            --text-h3: 24px;
+            /* Subsections */
+            --text-body: 18px;
+            /* MINIMUM per accessibility */
             --text-button: 18px;
             --text-caption: 14px;
-            
+
             /* Line Heights */
             --line-height-heading: 1.2;
             --line-height-body: 1.6;
             --line-height-mobile: 1.7;
-            
+
             /* Spacing Scale */
-            --space-xs: 4px;    /* 0.25rem */
-            --space-sm: 8px;    /* 0.5rem */
-            --space-md: 16px;   /* 1rem - base unit */
-            --space-lg: 24px;   /* 1.5rem */
-            --space-xl: 32px;   /* 2rem */
-            --space-2xl: 48px;  /* 3rem */
-            --space-3xl: 64px;  /* 4rem */
-            --space-4xl: 96px;  /* 6rem */
-            
+            --space-xs: 4px;
+            /* 0.25rem */
+            --space-sm: 8px;
+            /* 0.5rem */
+            --space-md: 16px;
+            /* 1rem - base unit */
+            --space-lg: 24px;
+            /* 1.5rem */
+            --space-xl: 32px;
+            /* 2rem */
+            --space-2xl: 48px;
+            /* 3rem */
+            --space-3xl: 64px;
+            /* 4rem */
+            --space-4xl: 96px;
+            /* 6rem */
+
             /* Border Radius */
             --radius-sm: 4px;
             --radius-md: 8px;
             --radius-lg: 16px;
-            
+
             /* Shadows */
             --shadow-sm: 0 2px 8px rgba(30, 58, 95, 0.08);
             --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.1);
             --shadow-cta: 0 2px 8px rgba(232, 165, 75, 0.3);
             --shadow-cta-hover: 0 4px 12px rgba(232, 165, 75, 0.4);
-            
+
             /* Layout */
             --container-max: 1200px;
             --gutter: 24px;
@@ -86,7 +114,9 @@
         /* ========================================
            RESET & BASE STYLES
            ======================================== */
-        *, *::before, *::after {
+        *,
+        *::before,
+        *::after {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
@@ -136,7 +166,9 @@
            TYPOGRAPHY
            Georgia headings + Source Sans body
            ======================================== */
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             font-family: var(--font-heading);
             font-weight: 700;
             line-height: var(--line-height-heading);
@@ -908,6 +940,7 @@
                 opacity: 0;
                 transform: translateY(24px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -926,15 +959,33 @@
             animation: fadeInUp 0.4s ease-out both;
         }
 
-        .service-card:nth-child(1) { animation-delay: 0.1s; }
-        .service-card:nth-child(2) { animation-delay: 0.15s; }
-        .service-card:nth-child(3) { animation-delay: 0.2s; }
-        .service-card:nth-child(4) { animation-delay: 0.25s; }
-        .service-card:nth-child(5) { animation-delay: 0.3s; }
-        .service-card:nth-child(6) { animation-delay: 0.35s; }
+        .service-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .service-card:nth-child(2) {
+            animation-delay: 0.15s;
+        }
+
+        .service-card:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+
+        .service-card:nth-child(4) {
+            animation-delay: 0.25s;
+        }
+
+        .service-card:nth-child(5) {
+            animation-delay: 0.3s;
+        }
+
+        .service-card:nth-child(6) {
+            animation-delay: 0.35s;
+        }
 
         /* Respect reduced motion preference */
         @media (prefers-reduced-motion: reduce) {
+
             .hero__content,
             .hero__image-frame,
             .service-card {
@@ -951,25 +1002,26 @@
             .mobile-sticky {
                 display: none !important;
             }
-            
+
             .header__phone {
                 display: flex !important;
             }
-            
+
             .hero::before {
                 display: none;
             }
-            
+
             body {
                 padding-bottom: 0;
             }
-            
+
             .btn--primary {
                 border: 2px solid var(--color-accent);
             }
         }
     </style>
 </head>
+
 <body>
     <!-- Skip link for keyboard/screen reader users -->
     <a class="skip-link" href="#main">Skip to main content</a>
@@ -987,13 +1039,16 @@
                 <span class="logo__icon" aria-hidden="true">✝</span>
                 <span class="logo__text">Tech Saints</span>
             </a>
-            
+
             <!-- Phone Number (visible tablet+) -->
-            <a href="tel:01onal273123456" class="header__phone">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            <a href="tel:07961187864" class="header__phone">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                    </path>
                 </svg>
-                01273 123 456
+                07961 187 864
             </a>
         </div>
     </header>
@@ -1004,7 +1059,7 @@
              - Clear value proposition above the fold
              - Primary CTA in Friendly Amber (#E8A54B)
              - Trust indicators (£0 call-out, £1/min, DBS-checked)
-             - Image: Jason helping client in home setting
+             - Image: Veemal helping client in home setting
              
              VISUAL NOTES:
              - 30-40% empty space above the fold
@@ -1017,48 +1072,57 @@
                 <div class="hero__content">
                     <!-- Location Badge -->
                     <span class="hero__badge">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" aria-hidden="true">
                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                             <circle cx="12" cy="10" r="3"></circle>
                         </svg>
                         Brighton, Hove, Lewes &amp; East Sussex
                     </span>
-                    
+
                     <!-- Main Headline - Georgia, sentence case -->
                     <h1 class="hero__title">Finally. Tech help that doesn't make you feel stupid.</h1>
-                    
+
                     <!-- Subtitle - empathetic, conversational -->
-                    <p class="hero__subtitle">I'm Jason—an ex-monk turned local tech helper. I come to your home, fix your computer, phone, or printer, and explain everything in plain English. No sighing. No jargon. No judgement.</p>
-                    
+                    <p class="hero__subtitle">I'm Veemal—an ex-monk turned local tech helper. I come to your home, fix
+                        your computer, phone, or printer, and explain everything in plain English. No sighing. No
+                        jargon. No judgement.</p>
+
                     <!-- CTA Group -->
                     <div class="hero__cta-group">
                         <!-- PRIMARY CTA - Friendly Amber background -->
-                        <a href="tel:01273123456" class="btn btn--primary btn--large">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        <a href="tel:07961187864" class="btn btn--primary btn--large">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
                             </svg>
                             <span class="btn__content">
                                 Get help this week
-                                <span class="btn__subtext">01273 123 456 · Mon–Sat 9am–6pm</span>
+                                <span class="btn__subtext">07961 187 864 · Mon–Sat 9am–6pm</span>
                             </span>
                         </a>
-                        
+
                         <!-- Trust Points - checkmarks in green -->
                         <div class="hero__trust-points">
                             <span class="hero__trust-point">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" aria-hidden="true">
                                     <polyline points="20 6 9 17 4 12"></polyline>
                                 </svg>
                                 £0 call-out fee
                             </span>
                             <span class="hero__trust-point">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" aria-hidden="true">
                                     <polyline points="20 6 9 17 4 12"></polyline>
                                 </svg>
                                 £1/minute (that's it)
                             </span>
                             <span class="hero__trust-point">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" aria-hidden="true">
                                     <polyline points="20 6 9 17 4 12"></polyline>
                                 </svg>
                                 DBS-checked
@@ -1066,14 +1130,14 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Hero Image -->
                 <div class="hero__image">
                     <div class="hero__image-frame">
                         <!-- 
                             IMAGE SPECIFICATIONS:
                             - Aspect ratio: 16:9
-                            - Shows: Jason helping an older client at their kitchen table
+                            - Shows: Veemal helping an older client at their kitchen table
                             - Natural lighting, domestic setting
                             - Both looking at laptop screen, client smiling
                             - Warm, patient interaction visible
@@ -1081,18 +1145,13 @@
                             - Box shadow: 0 4px 20px rgba(0,0,0,0.1)
                             
                             Replace placeholder with:
-                            <img src="/images/jason-helping-client.jpg" 
-                                 alt="Jason from Tech Saints patiently explaining something on a laptop to a smiling older client at their kitchen table"
+                            <img src="/images/Veemal-helping-client.jpg" 
+                                 alt="Veemal from Tech Saints patiently explaining something on a laptop to a smiling older client at their kitchen table"
                                  width="450" height="253" loading="eager">
                         -->
-                        <div class="hero__image-placeholder">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                                <polyline points="21 15 16 10 5 21"></polyline>
-                            </svg>
-                            <p class="hero__image-caption">Helping a client at their kitchen table</p>
-                        </div>
+                        <img src="images/veemal-tech-saints.png"
+                            alt="Veemal from Tech Saints patiently explaining something on a laptop to a smiling older client at their kitchen table"
+                            width="450" height="253" loading="eager">
                     </div>
                 </div>
             </div>
@@ -1113,38 +1172,42 @@
         <section class="problem-section">
             <div class="container problem-section__inner">
                 <h2 class="problem-section__title">Sound familiar?</h2>
-                
+
                 <div class="problem-list">
                     <div class="problem-list__item">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" aria-hidden="true">
                             <line x1="18" y1="6" x2="6" y2="18"></line>
                             <line x1="6" y1="6" x2="18" y2="18"></line>
                         </svg>
                         <span>Your laptop takes 5 minutes to start. You just need to check your email.</span>
                     </div>
                     <div class="problem-list__item">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" aria-hidden="true">
                             <line x1="18" y1="6" x2="6" y2="18"></line>
                             <line x1="6" y1="6" x2="18" y2="18"></line>
                         </svg>
                         <span>The printer "can't find the computer" again. You give up and drive to the library.</span>
                     </div>
                     <div class="problem-list__item">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" aria-hidden="true">
                             <line x1="18" y1="6" x2="6" y2="18"></line>
                             <line x1="6" y1="6" x2="18" y2="18"></line>
                         </svg>
                         <span>You called a helpline. They talked so fast you didn't understand a word.</span>
                     </div>
                     <div class="problem-list__item">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" aria-hidden="true">
                             <line x1="18" y1="6" x2="6" y2="18"></line>
                             <line x1="6" y1="6" x2="18" y2="18"></line>
                         </svg>
                         <span>Your nephew "fixed" it. Now you can't find anything.</span>
                     </div>
                 </div>
-                
+
                 <p class="problem-section__hook">Technology shouldn't make you feel helpless in your own home.</p>
             </div>
         </section>
@@ -1164,26 +1227,32 @@
             <div class="container trust-strip__inner">
                 <!-- Testimonial -->
                 <div class="testimonial">
-                    <p class="testimonial__quote">"I was terrified of pressing the wrong button. He didn't just fix it—he taught me. Now I video-call my grandchildren every Sunday."</p>
+                    <p class="testimonial__quote">"I was terrified of pressing the wrong button. He didn't just fix
+                        it—he taught me. Now I video-call my grandchildren every Sunday."</p>
                     <p class="testimonial__author">— Margaret, 74, Hastings</p>
                 </div>
-                
+
                 <!-- Credentials Grid -->
                 <div class="credentials">
                     <div class="credential">
-                        <svg class="credential__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        <svg class="credential__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" aria-hidden="true">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
                         </svg>
                         100% 5-Star Reviews
                     </div>
                     <div class="credential">
-                        <svg class="credential__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <svg class="credential__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" aria-hidden="true">
                             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                         </svg>
                         DBS-Checked &amp; Insured
                     </div>
                     <div class="credential">
-                        <svg class="credential__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <svg class="credential__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" aria-hidden="true">
                             <circle cx="12" cy="12" r="10"></circle>
                             <line x1="12" y1="8" x2="12" y2="12"></line>
                             <line x1="12" y1="16" x2="12.01" y2="16"></line>
@@ -1191,7 +1260,8 @@
                         No Contracts Ever
                     </div>
                     <div class="credential">
-                        <svg class="credential__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <svg class="credential__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" aria-hidden="true">
                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                             <circle cx="12" cy="10" r="3"></circle>
                         </svg>
@@ -1218,25 +1288,28 @@
                 <div class="services__header">
                     <h2>I fix frustration, not just machines</h2>
                 </div>
-                
+
                 <div class="services__grid">
                     <!-- Service Card 1: Slow Laptop -->
                     <div class="service-card">
                         <div class="service-card__icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
                                 <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
                                 <line x1="8" y1="21" x2="16" y2="21"></line>
                                 <line x1="12" y1="17" x2="12" y2="21"></line>
                             </svg>
                         </div>
                         <h3 class="service-card__title">Slow laptop? Fixed.</h3>
-                        <p class="service-card__desc">Most computers boot in under 30 seconds after I'm done. That 5-minute wait? Gone.</p>
+                        <p class="service-card__desc">Most computers boot in under 30 seconds after I'm done. That
+                            5-minute wait? Gone.</p>
                     </div>
-                    
+
                     <!-- Service Card 2: Wi-Fi -->
                     <div class="service-card">
                         <div class="service-card__icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
                                 <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
                                 <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
                                 <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
@@ -1244,58 +1317,68 @@
                             </svg>
                         </div>
                         <h3 class="service-card__title">Dead spots? Eliminated.</h3>
-                        <p class="service-card__desc">Wi-Fi that works in every room. No more losing signal halfway up the stairs.</p>
+                        <p class="service-card__desc">Wi-Fi that works in every room. No more losing signal halfway up
+                            the stairs.</p>
                     </div>
-                    
+
                     <!-- Service Card 3: Phone Setup -->
                     <div class="service-card">
                         <div class="service-card__icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
                                 <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
                                 <line x1="12" y1="18" x2="12.01" y2="18"></line>
                             </svg>
                         </div>
                         <h3 class="service-card__title">New phone? Set up.</h3>
-                        <p class="service-card__desc">All your photos transferred. All your apps installed. All your questions answered.</p>
+                        <p class="service-card__desc">All your photos transferred. All your apps installed. All your
+                            questions answered.</p>
                     </div>
-                    
+
                     <!-- Service Card 4: Printer -->
                     <div class="service-card">
                         <div class="service-card__icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
                                 <polyline points="6 9 6 2 18 2 18 9"></polyline>
-                                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2">
+                                </path>
                                 <rect x="6" y="14" width="12" height="8"></rect>
                             </svg>
                         </div>
                         <h3 class="service-card__title">Printer won't print?</h3>
-                        <p class="service-card__desc">I'll connect it properly—wireless, wired, whatever works. Then show you how to use it.</p>
+                        <p class="service-card__desc">I'll connect it properly—wireless, wired, whatever works. Then
+                            show you how to use it.</p>
                     </div>
-                    
+
                     <!-- Service Card 5: Online Safety -->
                     <div class="service-card">
                         <div class="service-card__icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
                                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                             </svg>
                         </div>
                         <h3 class="service-card__title">Scared of scams?</h3>
-                        <p class="service-card__desc">Learn to spot fake emails in 10 minutes. Bank online with confidence. Sleep better.</p>
+                        <p class="service-card__desc">Learn to spot fake emails in 10 minutes. Bank online with
+                            confidence. Sleep better.</p>
                     </div>
-                    
+
                     <!-- Service Card 6: Smart Home -->
                     <div class="service-card">
                         <div class="service-card__icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
                                 <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                                 <polyline points="9 22 9 12 15 12 15 22"></polyline>
                             </svg>
                         </div>
                         <h3 class="service-card__title">Smart home confused?</h3>
-                        <p class="service-card__desc">Alexa, smart TV, digital radio—I'll set it up and teach you the 3 commands you'll actually use.</p>
+                        <p class="service-card__desc">Alexa, smart TV, digital radio—I'll set it up and teach you the 3
+                            commands you'll actually use.</p>
                     </div>
                 </div>
-                
+
                 <div class="services__footer">
                     <strong>If it plugs in or connects, I can probably help.</strong> If I can't, I'll say so.
                 </div>
@@ -1319,26 +1402,33 @@
                 <div class="faq__header">
                     <h2>The questions everyone asks</h2>
                 </div>
-                
+
                 <dl class="faq__list">
                     <div class="faq-item">
                         <dt class="faq-item__question">"What if I'm really slow with technology?"</dt>
-                        <dd class="faq-item__answer">I spent 10 years as a monk. Patience isn't a skill—it's who I am. Ask me the same question 10 times. I'll explain it 10 different ways until it clicks.</dd>
+                        <dd class="faq-item__answer">I spent 10 years as a monk. Patience isn't a skill—it's who I am.
+                            Ask me the same question 10 times. I'll explain it 10 different ways until it clicks.</dd>
                     </div>
-                    
+
                     <div class="faq-item">
                         <dt class="faq-item__question">"How much will this cost me?"</dt>
-                        <dd class="faq-item__answer">£1 per minute. That's it. No call-out fee. No hidden charges. 15 minutes = £15. One hour = £60. Most visits take 30–60 minutes. You'll know exactly what you're paying before I leave.</dd>
+                        <dd class="faq-item__answer">£1 per minute. That's it. No call-out fee. No hidden charges. 15
+                            minutes = £15. One hour = £60. Most visits take 30–60 minutes. You'll know exactly what
+                            you're paying before I leave.</dd>
                     </div>
-                    
+
                     <div class="faq-item">
                         <dt class="faq-item__question">"Is it safe to let you in my home?"</dt>
-                        <dd class="faq-item__answer">Yes. DBS-checked (police background check). Fully insured. I carry ID. Have a friend or family member there if you prefer—many do, and that's completely fine.</dd>
+                        <dd class="faq-item__answer">Yes. DBS-checked (police background check). Fully insured. I carry
+                            ID. Have a friend or family member there if you prefer—many do, and that's completely fine.
+                        </dd>
                     </div>
-                    
+
                     <div class="faq-item">
                         <dt class="faq-item__question">"Will you try to sell me something?"</dt>
-                        <dd class="faq-item__answer">Never. I earn nothing from selling you a new computer. My job is to make what you own work better. If something genuinely needs replacing, I'll explain why—then leave the decision entirely to you.</dd>
+                        <dd class="faq-item__answer">Never. I earn nothing from selling you a new computer. My job is to
+                            make what you own work better. If something genuinely needs replacing, I'll explain why—then
+                            leave the decision entirely to you.</dd>
                     </div>
                 </dl>
             </div>
@@ -1358,24 +1448,29 @@
         <section class="final-cta">
             <div class="container final-cta__inner">
                 <h2 class="final-cta__title">One visit. Real confidence.</h2>
-                <p class="final-cta__subtitle">Stop avoiding that laptop. Stop dreading that printer. In one hour, you'll go from "I can't do this" to "I've got this."</p>
-                
+                <p class="final-cta__subtitle">Stop avoiding that laptop. Stop dreading that printer. In one hour,
+                    you'll go from "I can't do this" to "I've got this."</p>
+
                 <div class="final-cta__button-wrapper">
-                    <a href="tel:01273123456" class="btn btn--primary btn--large">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    <a href="tel:07961187864" class="btn btn--primary btn--large">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                            </path>
                         </svg>
                         <span class="btn__content">
                             Call now – book this week
-                            <span class="btn__subtext">01273 123 456 · No obligation</span>
+                            <span class="btn__subtext">07961 187 864 · No obligation</span>
                         </span>
                     </a>
                 </div>
-                
+
                 <!-- Carer Note - for adult children booking for parents -->
                 <div class="final-cta__carer-note">
                     <p class="final-cta__carer-title">Arranging help for Mum or Dad?</p>
-                    <p class="final-cta__carer-text">I get it. Call me first—I'll answer your questions honestly. On the day, I'll text you when I arrive and when I leave. You'll know they're in safe hands.</p>
+                    <p class="final-cta__carer-text">I get it. Call me first—I'll answer your questions honestly. On the
+                        day, I'll text you when I arrive and when I leave. You'll know they're in safe hands.</p>
                 </div>
             </div>
         </section>
@@ -1391,8 +1486,8 @@
         <div class="container footer__inner">
             <p class="footer__copy">© Tech Saints. All rights reserved.</p>
             <nav class="footer__links">
-                <a href="/privacy">Privacy Policy</a>
-                <a href="/terms">Terms of Service</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
             </nav>
         </div>
     </footer>
@@ -1405,12 +1500,16 @@
          - Touch target: minimum 48x48px
          ================================================================ -->
     <div class="mobile-sticky" aria-label="Call Tech Saints">
-        <a href="tel:01273123456" class="mobile-sticky__btn">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        <a href="tel:07961187864" class="mobile-sticky__btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
             </svg>
             Get Help This Week
         </a>
     </div>
 </body>
+
 </html>

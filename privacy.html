@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy – Tech Saints</title>
+    <meta name="description" content="Privacy Policy for Tech Saints. How we handle your data.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* Copied from index.html for consistency */
+        :root {
+            --color-primary: #1E3A5F;
+            --color-primary-light: #2D5A8A;
+            --color-secondary: #6B8E7A;
+            --color-secondary-light: #8FB4A0;
+            --color-accent: #E8A54B;
+            --color-accent-hover: #D4923C;
+            --color-neutral-50: #FAFBFC;
+            --color-neutral-100: #E8ECEF;
+            --color-neutral-400: #9CA8B3;
+            --color-neutral-700: #2D3640;
+            --color-neutral-900: #1A2128;
+            --color-success: #4A9E6B;
+            --color-error: #D4544A;
+            --font-heading: Georgia, 'Times New Roman', serif;
+            --font-body: 'Source Sans 3', 'Segoe UI', Arial, sans-serif;
+            --text-hero: clamp(32px, 5vw, 48px);
+            --text-h2: clamp(28px, 4vw, 36px);
+            --text-h3: 24px;
+            --text-body: 18px;
+            --text-button: 18px;
+            --text-caption: 14px;
+            --line-height-heading: 1.2;
+            --line-height-body: 1.6;
+            --space-xs: 4px;
+            --space-sm: 8px;
+            --space-md: 16px;
+            --space-lg: 24px;
+            --space-xl: 32px;
+            --space-2xl: 48px;
+            --space-3xl: 64px;
+            --space-4xl: 96px;
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 16px;
+            --shadow-sm: 0 2px 8px rgba(30, 58, 95, 0.08);
+            --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.1);
+            --container-max: 1200px;
+            --gutter: 24px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-size: var(--text-body);
+            line-height: var(--line-height-body);
+            color: var(--color-neutral-700);
+            background-color: var(--color-neutral-50);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 var(--gutter);
+        }
+
+        .section {
+            padding: var(--space-3xl) 0;
+        }
+
+        /* Header */
+        .header {
+            padding: var(--space-md) 0;
+            background: var(--color-neutral-50);
+            border-bottom: 1px solid var(--color-neutral-100);
+        }
+
+        .header__inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: var(--space-md);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            text-decoration: none;
+        }
+
+        .logo__icon {
+            width: 48px;
+            height: 48px;
+            background: var(--color-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .logo__text {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-neutral-900);
+        }
+
+        /* Typography */
+        h1,
+        h2,
+        h3 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            line-height: var(--line-height-heading);
+            color: var(--color-neutral-900);
+            margin-bottom: var(--space-md);
+        }
+
+        h1 {
+            font-size: var(--text-h2);
+            margin-bottom: var(--space-xl);
+        }
+
+        h2 {
+            font-size: var(--text-h3);
+            margin-top: var(--space-xl);
+        }
+
+        p {
+            margin-bottom: var(--space-md);
+        }
+
+        ul {
+            margin-bottom: var(--space-md);
+            padding-left: var(--space-xl);
+        }
+
+        li {
+            margin-bottom: var(--space-sm);
+        }
+
+        a {
+            color: var(--color-primary-light);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--color-neutral-900);
+            color: rgba(255, 255, 255, 0.7);
+            padding: var(--space-xl) 0;
+            margin-top: auto;
+        }
+
+        .footer__inner {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+            align-items: center;
+            text-align: center;
+        }
+
+        @media (min-width: 640px) {
+            .footer__inner {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+            }
+        }
+
+        .footer__copy {
+            font-size: var(--text-caption);
+            margin-bottom: 0;
+        }
+
+        .footer__links {
+            display: flex;
+            gap: var(--space-lg);
+        }
+
+        .footer__links a {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: var(--text-caption);
+            text-decoration: none;
+        }
+
+        .footer__links a:hover {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo" aria-label="Tech Saints home">
+                <span class="logo__icon" aria-hidden="true">✝</span>
+                <span class="logo__text">Tech Saints</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <p>Last updated: December 11, 2025</p>
+
+            <h2>1. Introduction</h2>
+            <p>Tech Saints ("we", "us", or "our") respects your privacy and is committed to protecting your personal
+                data. This privacy policy will inform you as to how we look after your personal data when you visit our
+                website or use our services.</p>
+
+            <h2>2. The Data We Collect</h2>
+            <p>We may collect, use, store and transfer different kinds of personal data about you which we have grouped
+                together follows:</p>
+            <ul>
+                <li><strong>Identity Data:</strong> First name, last name.</li>
+                <li><strong>Contact Data:</strong> Billing address, delivery address, email address, and telephone
+                    numbers.</li>
+                <li><strong>Transaction Data:</strong> Details about payments to and from you and other details of
+                    products and services you have purchased from us.</li>
+            </ul>
+
+            <h2>3. How We Use Your Data</h2>
+            <p>We will only use your personal data when the law allows us to. Most commonly, we will use your personal
+                data in the following circumstances:</p>
+            <ul>
+                <li>Where we need to perform the contract we are about to enter into or have entered into with you.</li>
+                <li>Where it is necessary for our legitimate interests (or those of a third party) and your interests
+                    and fundamental rights do not override those interests.</li>
+                <li>Where we need to comply with a legal or regulatory obligation.</li>
+            </ul>
+
+            <h2>4. Data Security</h2>
+            <p>We have put in place appropriate security measures to prevent your personal data from being accidentally
+                lost, used or accessed in an unauthorised way, altered or disclosed.</p>
+
+            <h2>5. Contact Us</h2>
+            <p>If you have any questions about this privacy policy or our privacy practices, please contact us at 07961
+                187 864.</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <p class="footer__copy">© Tech Saints. All rights reserved.</p>
+            <nav class="footer__links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>

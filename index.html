@@ -253,16 +253,10 @@
             text-decoration: none;
         }
 
-        .logo__icon {
-            width: 48px;
-            height: 48px;
-            background: var(--color-primary);
+        .logo__image {
+            height: 72px;
+            width: auto;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
         }
 
         .logo__text {
@@ -496,10 +490,16 @@
         }
 
         .btn__subtext {
-            font-size: var(--text-caption);
-            font-weight: 400;
+            display: block;
+            font-size: 18px;
+            font-family: var(--font-body);
+            font-weight: 700;
             opacity: 0.85;
             margin-top: 2px;
+        }
+
+        .btn__phone {
+            font-size: 20px;
         }
 
         /* Secondary Button - Deep Trust Blue outline */
@@ -713,7 +713,7 @@
             padding: var(--space-lg);
             background: rgba(107, 142, 122, 0.1);
             border-radius: var(--radius-md);
-            font-size: var(--text-body);
+            font-size: 22px;
             color: var(--color-neutral-900);
         }
 
@@ -1042,7 +1042,7 @@
         <div class="container header__inner">
             <!-- Logo: Circle icon + wordmark -->
             <a href="/" class="logo" aria-label="Tech Saints home">
-                <span class="logo__icon" aria-hidden="true">✝</span>
+                <img src="images/Tech Saints Logo.jpg" alt="Tech Saints Logo" class="logo__image">
                 <span class="logo__text">Tech Saints</span>
             </a>
 
@@ -1083,7 +1083,7 @@
                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                             <circle cx="12" cy="10" r="3"></circle>
                         </svg>
-                        Brighton, Hove, Lewes &amp; East Sussex
+                        Seaford, Peacehaven, The Deans &amp; East Sussex
                     </span>
 
                     <!-- Main Headline - Georgia, sentence case -->
@@ -1106,7 +1106,8 @@
                             </svg>
                             <span class="btn__content">
                                 Get help this week
-                                <span class="btn__subtext">07961 187 864 · Mon - Sun 9am to 9pm</span>
+                                <span class="btn__subtext"><span class="btn__phone">07961 187 864</span> · Mon - Sun 9am
+                                    to 9pm</span>
                             </span>
                         </a>
 
@@ -1235,7 +1236,7 @@
                 <div class="testimonial">
                     <p class="testimonial__quote">"I was terrified of pressing the wrong button. He didn't just fix
                         it—he taught me. Now I video-call my grandchildren every Sunday."</p>
-                    <p class="testimonial__author">— Margaret, 74, Hastings</p>
+                    <p class="testimonial__author">— Pat, 75, Saltdean</p>
                 </div>
 
                 <!-- Credentials Grid -->
@@ -1392,6 +1393,57 @@
         </section>
 
         <!-- ================================================================
+             SECOND TRUST STRIP
+             - Additional social proof
+             ================================================================ -->
+        <section class="trust-strip">
+            <div class="container trust-strip__inner">
+                <!-- Testimonial -->
+                <div class="testimonial">
+                    <p class="testimonial__quote">"I changed my internet provider, and needed all devices reconnecting to it, including my new wifi printer. I called Vee &amp; he came around same day and set it up in 30mins"</p>
+                    <p class="testimonial__author">— Ian, 80, Seaford</p>
+                </div>
+
+                <!-- Credentials Grid -->
+                <div class="credentials">
+                    <div class="credential">
+                        <svg class="credential__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" aria-hidden="true">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                        </svg>
+                        100% 5-Star Reviews
+                    </div>
+                    <div class="credential">
+                        <svg class="credential__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" aria-hidden="true">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                        DBS-Checked &amp; Insured
+                    </div>
+                    <div class="credential">
+                        <svg class="credential__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                        </svg>
+                        No Contracts Ever
+                    </div>
+                    <div class="credential">
+                        <svg class="credential__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" aria-hidden="true">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        Your Neighbour
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================
              SECTION 6: FAQ
              - Addresses common objections
              - Q badges in sage circles
@@ -1467,7 +1519,8 @@
                         </svg>
                         <span class="btn__content">
                             Call now – book this week
-                            <span class="btn__subtext">07961 187 864 · No obligation</span>
+                            <span class="btn__subtext"><span class="btn__phone">07961 187 864</span> · No
+                                obligation</span>
                         </span>
                     </a>
                 </div>
